@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DockXml>
+  <ConnectionString>
+    <ConnectionString ID="ZB">
+      <DataSource></DataSource>
+      <InitialCatalog></InitialCatalog>
+      <UserID></UserID>
+      <Pwd></Pwd>
+      <RefreshIntervalMins></RefreshIntervalMins>
+    </ConnectionString>
+  </ConnectionString>
+</DockXml>

@@ -1,0 +1,12 @@
+D:\项目\bs项目\正京元-中心仓\正经元-中心仓\code\WebApi_ZJY_ZXC\Win_Auto_Task\bin\Debug\Win_Auto_Task.exe
+D:\项目\bs项目\正京元-中心仓\正经元-中心仓\code\WebApi_ZJY_ZXC\Win_Auto_Task\bin\Debug\Win_Auto_Task.pdb
+D:\项目\bs项目\正京元-中心仓\正经元-中心仓\code\WebApi_ZJY_ZXC\Win_Auto_Task\bin\Debug\Newtonsoft.Json.dll
+D:\项目\bs项目\正京元-中心仓\正经元-中心仓\code\WebApi_ZJY_ZXC\Win_Auto_Task\bin\Debug\Newtonsoft.Json.xml
+D:\项目\bs项目\正京元-中心仓\正经元-中心仓\code\WebApi_ZJY_ZXC\Win_Auto_Task\obj\Debug\Win_Auto_Task.csprojAssemblyReference.cache
+D:\项目\bs项目\正京元-中心仓\正经元-中心仓\code\WebApi_ZJY_ZXC\Win_Auto_Task\obj\Debug\Win_Auto_Task.frm_main.resources
+D:\项目\bs项目\正京元-中心仓\正经元-中心仓\code\WebApi_ZJY_ZXC\Win_Auto_Task\obj\Debug\Win_Auto_Task.Properties.Resources.resources
+D:\项目\bs项目\正京元-中心仓\正经元-中心仓\code\WebApi_ZJY_ZXC\Win_Auto_Task\obj\Debug\Win_Auto_Task.csproj.GenerateResource.cache
+D:\项目\bs项目\正京元-中心仓\正经元-中心仓\code\WebApi_ZJY_ZXC\Win_Auto_Task\obj\Debug\Win_Auto_Task.csproj.CoreCompileInputs.cache
+D:\项目\bs项目\正京元-中心仓\正经元-中心仓\code\WebApi_ZJY_ZXC\Win_Auto_Task\obj\Debug\Win_Auto_Task.csproj.CopyComplete
+D:\项目\bs项目\正京元-中心仓\正经元-中心仓\code\WebApi_ZJY_ZXC\Win_Auto_Task\obj\Debug\Win_Auto_Task.exe
+D:\项目\bs项目\正京元-中心仓\正经元-中心仓\code\WebApi_ZJY_ZXC\Win_Auto_Task\obj\Debug\Win_Auto_Task.pdb

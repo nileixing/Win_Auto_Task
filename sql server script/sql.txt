@@ -1,0 +1,58 @@
+ 
+IF NOT EXISTS(SELECT * FROM sysobjects WHERE name='CBIntertask')
+BEGIN
+CREATE TABLE [dbo].[CBIntertask](
+	[Intersysid] [INT] IDENTITY(1,1) NOT NULL,  --主键自增
+	[Interid] [INT] NULL,						--任务id
+	[lastexectime] [DATETIME] NULL,				--暂时没用
+	[lastsuctime] [DATETIME] NULL,				--暂时没用
+	[lastexecresult] [VARCHAR](MAX) NULL,		--暂时没用
+	[execcmd] [VARCHAR](200) NULL,				--暂时没用
+	[execcmd1] [VARCHAR](200) NULL,				--暂时没用
+	[term] [INT] NULL,							--执行间隔单位秒
+	[memo] [VARCHAR](100) NULL,					--备注
+	[used] [INT] NULL,							--是否使用
+	[transtimestamp] [DATETIME] NULL,			--暂时没用
+	[cb_name] [VARCHAR](100) NULL,				--任务名称
+	[cb_check] [INT] NULL,						--是否选中
+	[cb_code] [VARCHAR](100) NULL,				--任务代码，代码中的方法名
+	[term_start_time] [DATETIME] NOT NULL DEFAULT ('1900-01-01 00:00:00'),	--每日从哪个时间点开始后才执行
+	[is_remind] [INT] NOT NULL DEFAULT ((0)),	--是否提醒
+	[is_percentage] [INT] NOT NULL DEFAULT ((0)),	--是否打印进度条
+	[percentage_term] [INT] NOT NULL DEFAULT ((1)),	--打印进度条的间隔
+ CONSTRAINT [PK_CBINTERTASK] PRIMARY KEY CLUSTERED 
+(
+	[Intersysid] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, FILLFACTOR = 90) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+ 
+END
+
+IF NOT EXISTS(SELECT 1 FROM [CBIntertask] WHERE Interid = 1)
+BEGIN 
+INSERT INTO [CBIntertask]
+VALUES
+(  1, N'2020-08-26T15:08:17.633', N'2020-08-26T15:08:17.633', '', '', '', 666666, '', 1, N'2020-08-26T15:08:17.633', '测试任务', 0, 'cb1', N'1900-01-01T00:00:00', 0, 0, 1 )
+END
+  
+IF NOT EXISTS(SELECT 1 FROM [CBIntertask] WHERE Interid = 2)
+BEGIN 
+INSERT INTO [CBIntertask]
+VALUES
+(  2, N'2020-12-25T10:20:57.697', N'2020-12-25T10:20:57.697', '', '', '', 1, '打印term', 1, N'2020-12-25T10:20:57.697', '打印任务', 1, 'Print_Term', N'1900-01-01T00:00:00', 0, 0, 1 )
+END
+
+IF NOT EXISTS(SELECT 1 FROM [CBIntertask] WHERE Interid = 3)
+BEGIN 
+INSERT INTO [CBIntertask]
+VALUES
+(  3, N'2020-12-25T10:20:57.697', N'2020-12-25T10:20:57.697', '', '', '', 86400, '每日凌晨1点签到', 1, N'2020-12-25T10:20:57.697', '任务1', 1, 'Task_1', N'1900-01-01T01:00:00', 0, 0, 1 )
+END
+
+IF NOT EXISTS(SELECT 1 FROM [CBIntertask] WHERE Interid = 4)
+BEGIN 
+INSERT INTO [CBIntertask]
+VALUES
+(  4, N'2020-12-25T10:20:57.697', N'2020-12-25T10:20:57.697', '', '', '', 3600, '每日凌晨9点开始，每小时下载数据', 1, N'2020-12-25T10:20:57.697', '任务2', 1, 'Task_2', N'1900-01-01T09:00:00', 0, 1, 2 )
+END
+ 
