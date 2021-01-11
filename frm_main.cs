@@ -503,8 +503,7 @@ namespace Win_Auto_Task
                 dr["term_start_time"] = "1900-01-01 01:00:00.000";
                 task_dt.Rows.Add(dr);
 
-                #endregion
-
+                #endregion 
             }
 
             int cb_count = task_dt.Rows.Count;
