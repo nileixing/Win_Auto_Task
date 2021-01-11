@@ -424,7 +424,7 @@ namespace Win_Auto_Task
                 DateTime.TryParse(task_dt.Rows[i]["term_start_time"].ToString(), out time);
                 int term_start_time = GetTime_Int(time);
 
-                if ((time_sum_now - term_start_time) % term == 0 && time_sum > term_start_time)
+                if ((time_sum_now - term_start_time + max_sum) % term == 0 && time_sum_now > term_start_time)
                 {
                     Run_Inter(task_dt.Rows[i]["cb_code"].ToString());
                 }

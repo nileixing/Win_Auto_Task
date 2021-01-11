@@ -10,3 +10,15 @@
  
  
 
+[21-01-11 14:14:56.605] 
+ [Query_dt at offset 196 in file:line:column <filename unknown>:0:0] 
+ SELECT * FROM CBIntertask WHERE used = 1 order by Interid
+ 
+ 
+
+[21-01-11 14:15:46.614] 
+ [Query_dt at offset 196 in file:line:column <filename unknown>:0:0] 
+ SELECT * FROM CBIntertask WHERE used = 1 order by Interid
+ 
+ 
+
