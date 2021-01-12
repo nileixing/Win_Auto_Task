@@ -12,7 +12,6 @@ D:\项目\bs项目\正京元-中心仓\正经元-中心仓\code\WebApi_ZJY_ZXC\W
 D:\项目\bs项目\正京元-中心仓\正经元-中心仓\code\WebApi_ZJY_ZXC\Win_Auto_Task\obj\Debug\Win_Auto_Task.pdb
 D:\zz_project\vs_project\repos\nileixing\Win_Auto_Task\bin\Debug\Win_Auto_Task.exe
 D:\zz_project\vs_project\repos\nileixing\Win_Auto_Task\bin\Debug\Win_Auto_Task.pdb
-D:\zz_project\vs_project\repos\nileixing\Win_Auto_Task\bin\Debug\Newtonsoft.Json.xml
 D:\zz_project\vs_project\repos\nileixing\Win_Auto_Task\obj\Debug\Win_Auto_Task.csprojAssemblyReference.cache
 D:\zz_project\vs_project\repos\nileixing\Win_Auto_Task\obj\Debug\Win_Auto_Task.frm_main.resources
 D:\zz_project\vs_project\repos\nileixing\Win_Auto_Task\obj\Debug\Win_Auto_Task.Properties.Resources.resources
