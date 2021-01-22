@@ -591,30 +591,38 @@ namespace Win_Auto_Task
             {
                 if (cb.Checked)
                 {  
+
                     var function = Activator.CreateInstance(typeof(cb_task)) as cb_task;
 
                     Task t1 = new Task(() =>
                     {
-                        System.Diagnostics.Stopwatch stopwatch = new System.Diagnostics.Stopwatch();
-                        stopwatch.Start();
-
-                        var method = function.GetType().GetMethod(cb.Name);
-                        object result = method.Invoke(function, null);
-
-                        stopwatch.Stop();
-                        double time1 = stopwatch.Elapsed.TotalSeconds; //这里是输出的总运行秒数,精  
-
-                        function.Percentage = 100;
-                        string msg = result.ToString() + " 耗时：" + time1;
-                        AddMessage(cb, msg);
-
-                        if (cb.Tag != null)
+                        try
                         {
-                            if (((cb_Tag)cb.Tag).is_remind == "1")
+                            System.Diagnostics.Stopwatch stopwatch = new System.Diagnostics.Stopwatch();
+                            stopwatch.Start();
+
+                            var method = function.GetType().GetMethod(cb.Name);
+                            object result = method.Invoke(function, null);
+
+                            stopwatch.Stop();
+                            double time1 = stopwatch.Elapsed.TotalSeconds; //这里是输出的总运行秒数,精  
+
+                            function.Percentage = 100;
+                            string msg = result.ToString() + " 耗时：" + time1;
+                            AddMessage(cb, msg);
+
+                            if (cb.Tag != null)
                             {
-                                //提醒到你要提醒的地方
-                                //PubFun.Record_Diary_Day_Remind(cb.Name, msg);
-                            }
+                                if (((cb_Tag)cb.Tag).is_remind == "1")
+                                {
+                                    //提醒到你要提醒的地方 例如server酱，钉钉，qq等
+                                    //PubFun.Record_Diary_Day_Remind(cb.Name, msg);
+                                }
+                            } 
+                        }
+                        catch (Exception e)
+                        {
+                            AddMessage(cb, "任务执行异常！" + e.Message);
                         }
                     });
                     t1.Start();
